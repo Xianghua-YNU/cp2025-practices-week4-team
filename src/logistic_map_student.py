@@ -17,10 +17,11 @@ def iterate_logistic(r, x0, n):
     返回:
         x: 迭代序列数组
     """
-    x=np.array([])
-    for i9 in range(0,n):
-        x0=
-    pass
+    x=np.array([x0])
+    for i in range(0,n):
+        x0=r*x0*(1-x0)
+        np.append(x,x0)
+    return x
 
 def plot_time_series(r, x0, n):
     """
