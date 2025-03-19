@@ -35,7 +35,17 @@ def plot_time_series(r, x0, n):
     返回:
         fig: matplotlib图像对象
     """
-    pass
+    x = iterate_logistic(r, x0, n)
+    t = np.arange(n)
+    
+    fig, ax = plt.subplots(figsize=(10, 6))
+    ax.plot(t, x, 'b-', lw=1)
+    ax.set_xlabel('迭代次数')
+    ax.set_ylabel('x')
+    ax.set_title(f'Logistic映射时间序列 (r={r})')
+    ax.grid(True)
+    
+    return fig
 
 def plot_bifurcation(r_min, r_max, n_r, n_iterations, n_discard):
     """
