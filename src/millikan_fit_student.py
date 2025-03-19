@@ -119,6 +119,8 @@ def calculate_planck_constant(m):
         relative_error: 与实际值的相对误差(%)
     """
     # 电子电荷
+    if m <= 0:
+        raise ValueError("斜率必须为正数")
     e = 1.602e-19  # C
     
     # 在此处编写代码，计算普朗克常量和相对误差
