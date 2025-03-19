@@ -69,7 +69,7 @@ def calculate_parameters(x, y):
     Exx =  sum_xx/N
     Exy = sum_xy/N
     D = (Exx - Ex**2)
-    if denominator == 0:
+    if D == 0:
         raise ValueError("无法计算参数，分母为零")
     
     m = (Exy - Ex*Ey)/(Exx - Ex**2)
